@@ -309,10 +309,14 @@ msgid ""
 " extensions, you'll run lots of individual Distutils commands on their "
 "own."
 msgstr ""
+"인터넷에서 다운로드받은 모듈을 설치하는 것이 하려는 일의 전부라면"
+"이렇게 설치과정을 나누는 기능이 필요하지 않겠지만, 고급 작업에서는 이 기능이 매우 편리합니다."
+"자신만의 파이썬 모듈과 확장기능을 배포하려 한다면,"
+"그들에 대해 개별 Distutils 명령어를 많이 적용하게 될 것입니다."
 
 #: ../Doc/install/index.rst:198
 msgid "How building works"
-msgstr ""
+msgstr "빌드가 이루어지는 과정"
 
 #: ../Doc/install/index.rst:200
 msgid ""
@@ -323,6 +327,10 @@ msgid ""
 "change the build directory with the :option:`!--build-base` option. For "
 "example::"
 msgstr ""
+"위에서 암시되었듯 :command:`build` 명령어는 설치할 파일을 *build directory* 안에 놓는 역할을 맡습니다."
+"별도의 지시가 없으면 배포판의 루트 디렉토리 밑의 :file:`build` 를 이용합니다;"
+"속도가 아주 중요한 문제이거나 소스 디렉토리 구조를 원래대로 보존하고 싶다면,"
+":option:`!--build-base` 옵션으로써 build directory 위치를 바꿀 수 있습니다. 예로써::"
 
 #: ../Doc/install/index.rst:208
 msgid ""
@@ -330,10 +338,13 @@ msgid ""
 "personal Distutils configuration file; see section :ref:`inst-config-"
 "files`.)  Normally, this isn't necessary."
 msgstr ""
+"(또는 시스템의 지시사항(directive)이나 개인의 Distutils 설정 파일을 통해"
+"이 설정을 영구적으로 만들 수도 있습니다; :ref:`inst-config-files` 섹션을 보십시오.)"
+"보통은 이것이 필요하지 않습니다."
 
 #: ../Doc/install/index.rst:212
 msgid "The default layout for the build tree is as follows::"
-msgstr ""
+msgstr "빌드 트리의 기본 레이아웃은 다음과 같습니다::"
 
 #: ../Doc/install/index.rst:219
 msgid ""
@@ -348,6 +359,16 @@ msgid ""
 " case, the :file:`lib` (or :file:`lib.{plat}`) directory contains all "
 "Python modules (pure Python and extensions) that will be installed."
 msgstr ""
+"여기서 ``<plat>`` 은 현재 운영체제/하드웨어 환경과 파이썬 버전을 간략히 기술하는 데까지 이릅니다."
+"OS/hardware platform and Python version.  The first form, with just a "
+":file:`lib` directory, is used for \"pure module distributions\"---that "
+"is, module distributions that include only pure Python modules.  If a "
+"module distribution contains any extensions (modules written in C/C++), "
+"then the second form, with two ``<plat>`` directories, is used.  In that "
+"case, the :file:`temp.{plat}` directory holds temporary files generated "
+"by the compile/link process that don't actually get installed.  In either"
+" case, the :file:`lib` (or :file:`lib.{plat}`) directory contains all "
+"Python modules (pure Python and extensions) that will be installed."
 
 #: ../Doc/install/index.rst:229
 msgid ""
